@@ -4,8 +4,117 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Support"
-    android:orientation="vertical">
+    tools:context=".Support">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:layout_marginTop="-50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Our team are here "
+            android:textColor="@color/colorPrimary"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="to help..!!"
+            android:textColor="@color/colorPrimary"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:layout_marginTop="-15dp"
+            android:gravity="center_horizontal"
+
+            />
+
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/circle_jay"
+            android:layout_marginTop="40dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mr.Jayesh Chaudhari"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="email"
+            android:text="jayeshchaudhari667@gmail.com"
+            android:drawableLeft="@drawable/email3"
+            android:textColorLink="#808080"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="phone"
+            android:drawableLeft="@drawable/phone"
+            android:text="+917057031076"
+            android:textColorLink="#808080"
+            android:textSize="15sp"
+            />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/circle_anna"
+            android:layout_marginTop="40dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mr.Shantanu Kurapati"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/email1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="email"
+            android:text="shantanu.kurapati@gmail.com"
+            android:drawableLeft="@drawable/email3"
+            android:textColorLink="#808080"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/phone1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="phone"
+            android:drawableLeft="@drawable/phone"
+            android:text="+918308016364"
+            android:textColorLink="#808080"
+            android:textSize="15sp"
+            />
+
+    </LinearLayout>
+
+
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
@@ -13,8 +122,8 @@
         android:id="@+id/bottomNav"
         android:layout_alignParentBottom="true"
         app:menu="@menu/bottom_navigation"
-        android:background="@drawable/round"
+        android:background="@drawable/round" />
 
-        />
+
 
 </RelativeLayout>
