@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Main2Activity"
+    android:layout_weight="1">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="-230dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/companyname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alger1"
+            android:text="@string/app_name"
+            android:textStyle="italic"
+
+            android:textColor="@color/appname"
+            android:textSize="40sp" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="2dp"
+            android:layout_height="43dp"
+            android:layout_marginLeft="155dp"
+            android:layout_marginTop="-45dp"
+            android:background="#000000" />
+
+        <TextView
+            android:id="@+id/quote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="-30dp"
+            android:fontFamily="@font/lucida"
+            android:text="@string/quote"
+           android:textStyle="bold"
+            android:textColor="@color/quote"
+            android:textSize="12sp" />
+
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/gradiant">
+
+            <TableRow>
+
+
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+
+                    android:background="@null"
+                    android:drawableTop="@drawable/homestays"
+                    android:text="@string/btn1"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+
+                    android:background="@null"
+                    android:drawableTop="@drawable/hills"
+                    android:text="@string/btn2"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btn3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableTop="@drawable/treking"
+                    android:text="@string/btn3"
+                    android:textAllCaps="false" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="10dp">
+
+
+                <Button
+                    android:id="@+id/btn4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+
+                    android:background="@null"
+                    android:drawableTop="@drawable/beach"
+                    android:text="@string/btn4"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btn5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableTop="@drawable/experential"
+                    android:text="@string/btn5"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/btn6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+
+                    android:background="@null"
+                    android:drawableTop="@drawable/trip"
+                    android:text="@string/btn6"
+                    android:textAllCaps="false" />
+            </TableRow>
+
+        </TableLayout>
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="3dp"
+            android:layout_height="55dp"
+            android:layout_below="@+id/table"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:background="#000000" />
+
+
+        <TextView
+            android:id="@+id/explore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/table"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="-55dp"
+            android:fontFamily="@font/arial1"
+            android:text="Explore Activities"
+            android:textColor="@color/quote"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/quote1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/explore"
+            android:layout_marginLeft="25sp"
+            android:text="Create your own experience story..."
+            android:textColor="#808080" />
+
+        <ImageButton
+            android:id="@+id/camp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+
+            android:layout_marginRight="15dp"
+
+            android:background="@drawable/camping1"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-75sp"
+            android:fontFamily="@font/pristina"
+            android:text="Camping"
+            android:textColor="@color/imgbtn1"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="The Adventure Trip.."
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/homestays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/homestay3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-75sp"
+            android:fontFamily="@font/pristina"
+            android:text="Homestays"
+            android:textColor="@color/imgbtn1"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Aunthentic Experence"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+
+        <ImageButton
+            android:id="@+id/hills"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/hills1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-75sp"
+            android:fontFamily="@font/pristina"
+            android:text="Hills and Snow"
+            android:textColor="@color/imgbtn1"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Feeling High.."
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+
+        <ImageButton
+            android:id="@+id/treking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/trekking1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-75sp"
+            android:fontFamily="@font/pristina"
+            android:text="Trekking"
+            android:textColor="@color/imgbtn"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Wake your dreams.."
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+
+        <ImageButton
+            android:id="@+id/beach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/beaches1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-75sp"
+            android:fontFamily="@font/pristina"
+            android:text="Ocean and Beaches"
+            android:textColor="@color/imgbtn"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Chill Out Places.."
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+
+        <ImageButton
+            android:id="@+id/experience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="15dp"
+
+            android:background="@drawable/experiential1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-75sp"
+            android:fontFamily="@font/pristina"
+            android:text="Experiential Trips"
+            android:textColor="@color/imgbtn"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Something Exciting.."
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+
+        <ImageButton
+            android:id="@+id/budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/budget1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-75sp"
+            android:fontFamily="@font/pristina"
+            android:text="Budget Trips"
+            android:textColor="@color/imgbtn"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Pocket Friendly Trips.."
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:text="© 2020 All rights reserved." />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:text="JOS TECHNOLOGIES Pvt.Ltd" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomNav"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation"
+        android:background="@drawable/round"
+        />
+
+
+
+
+</RelativeLayout>
+

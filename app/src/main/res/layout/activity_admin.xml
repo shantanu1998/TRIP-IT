@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin">
+
+
+   <ImageView
+       android:id="@+id/imgview"
+       android:layout_width="match_parent"
+       android:layout_height="150dp"
+       android:background="#0099ff"/>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/wave"
+       android:layout_below="@+id/imgview"/>
+
+
+
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/person2"
+       android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin"
+        android:textSize="50dp"
+        android:textColor="#ffffff"
+        android:layout_margin="20dp"
+        android:paddingTop="25dp"
+        />
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
+   android:paddingTop="70dp"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp">
+
+    <EditText
+        android:id="@+id/adminemail"
+        android:drawableRight="@drawable/email2"
+        android:hint="Email"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/round_border_admin"
+        />
+
+
+    <EditText
+        android:id="@+id/adminpass"
+       android:drawableRight="@drawable/pass"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_border_admin"/>
+
+<Button
+    android:id="@+id/btn_login_admin"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/shape_btn_login_admin"
+    android:text="Login"
+    android:textColor="#ffffff"
+    android:textSize="20sp"/>
+
+
+
+</LinearLayout>
+
+
+
+</RelativeLayout>

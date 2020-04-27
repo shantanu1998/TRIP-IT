@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">TRIP IT</string>
+    <string name="quote">Dream. Explore. Discover</string>
+    <string name="btn1">Homestays</string>
+    <string name="btn2">Hills and Snow</string>
+    <string name="btn3">Treking</string>
+    <string name="btn4">Beaches</string>
+    <string name="btn5">Experiential Trips</string>
+    <string name="btn6">Budget Trips</string>
+    <string name="img1">Camping
+    The Adventure Trip
+    </string>
+
+    <string-array name="Spinner_items">
+
+        <item>Homestays</item>
+        <item>Hills and Snow</item>
+        <item>Treking</item>
+        <item>Beaches</item>
+        <item>Experential Trips</item>
+        <item>Budget Trips</item>
+
+
+    </string-array>
+</resources>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+
+        android:src="@drawable/logo" />
+
+    <RelativeLayout
+        android:layout_width="220dp"
+        android:layout_height="480dp"
+        android:background="@drawable/shape_left_pannel"
+        android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:id="@+id/loginadmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login as admin"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:textSize="20sp"
+       android:textColor="@color/blue"
+        />
+
+    <LinearLayout
+        
+        android:id="@+id/loginpannel"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/shape_login_pannel"
+        android:layout_centerVertical="true"
+        android:paddingTop="70dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:orientation="vertical">
+        
+        <EditText
+            android:drawableRight="@drawable/email"
+            android:hint="Email"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            />
+
+
+        <EditText
+            android:drawableRight="@drawable/password"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+
+            />
+
+        <TextView
+            android:gravity="right"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forget Password"/>
+        
+        
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_marginBottom="5dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/loginpannel"
+        android:background="@drawable/shape_login_button"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textSize="20sp"
+        android:text="Login"
+        android:layout_alignTop="@+id/loginpannel"
+        android:layout_marginLeft="40dp"
+       />
+
+    <TextView
+        android:id="@+id/tvsignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:textSize="20sp"
+        android:text="Sign Up"
+        android:layout_alignTop="@+id/loginpannel"
+        android:layout_marginRight="40dp"
+        />
+
+    <LinearLayout
+        
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an acoout"/>
+
+        <TextView
+            android:id="@+id/tvsignupsecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
+            android:layout_marginLeft="20dp"
+            android:textSize="20sp"
+            android:textColor="@color/pink"/>
+
+
+    </LinearLayout>
+
+
+  
+
+    
+    
+
+</RelativeLayout>
