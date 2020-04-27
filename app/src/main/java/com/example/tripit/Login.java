@@ -40,10 +40,20 @@ public class Login extends AppCompatActivity {
         Button btnLogin=findViewById(R.id.btnLogin);
         editTextUsername = (EditText) findViewById(R.id.email);
         editTextPassword = (EditText) findViewById(R.id.password);
-        btnLogin.setOnClickListener(onClickLogin());
+
         loginadmin.setOnClickListener(onClickAdmin());
         tvSignup.setOnClickListener(onClickSignup());
         tvSignupSecond.setOnClickListener(onClickSignup());
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                userLogin();
+
+
+
+            }
+        });
     }
 
     private View.OnClickListener onClickAdmin(){
@@ -70,22 +80,7 @@ public class Login extends AppCompatActivity {
 
     }
 
-    private View.OnClickListener onClickLogin(){
 
-        return new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                userLogin();
-                finish();
-
-                Intent intent=new Intent(Login.this,Main2Activity.class);
-                Login.this.startActivity(intent);
-            }
-        };
-
-
-    }
     private void userLogin() {
         //first getting the values
         final String username = editTextUsername.getText().toString();
@@ -148,9 +143,13 @@ public class Login extends AppCompatActivity {
                         //storing the user in shared preferences
                         SharedPrefManager.getInstance(getApplicationContext()).userLogin(user);
 
-
                         //starting the profile activity
-                        // StartUserProfileActivity();
+                        Intent intent=new Intent(Login.this,Main2Activity.class);
+                        Login.this.startActivity(intent);
+
+
+
+
 
 
 
@@ -183,6 +182,8 @@ public class Login extends AppCompatActivity {
 
         UserLogin ul = new UserLogin();
         ul.execute();
+        //Intent intent=new Intent(Login.this,Main2Activity.class);
+        //Login.this.startActivity(intent);
 
 
 

@@ -38,6 +38,7 @@
 
         <EditText
             android:drawableRight="@drawable/username"
+            android:id="@+id/editText_Name"
             android:hint="Username"
             android:layout_width="match_parent"
             android:layout_height="60dp"
@@ -46,6 +47,7 @@
 
         <EditText
             android:drawableRight="@drawable/email"
+            android:id="@+id/editTextEmail"
             android:hint="Email"
             android:layout_width="match_parent"
             android:layout_height="60dp"
@@ -55,18 +57,13 @@
         <EditText
             android:drawableRight="@drawable/password"
             android:inputType="textPassword"
+            android:id="@+id/editTextPassword"
             android:hint="Password"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             />
 
-        <EditText
-            android:drawableRight="@drawable/password"
-            android:inputType="textPassword"
-            android:hint="Confirm Password"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            />
+
 
 
 
@@ -78,6 +75,7 @@
         android:layout_height="50dp"
         android:text="Sign Up"
         android:textColor="@color/white"
+        android:id="@+id/Register"
         android:layout_centerHorizontal="true"
         android:layout_alignBottom="@+id/loginpannel"
         android:background="@drawable/shape_login_button"/>
