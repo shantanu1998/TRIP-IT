@@ -108,7 +108,7 @@ public class SharedPrefManager {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         editor.apply();
-        mCtx.startActivity(new Intent(mCtx, MainActivity.class));
+        //mCtx.startActivity(new Intent(mCtx, Login.class));
     }
 
 }

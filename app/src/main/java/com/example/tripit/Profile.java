@@ -6,10 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Profile extends AppCompatActivity {
+    TextView textViewId, textViewUsername, textViewEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +56,40 @@ public class Profile extends AppCompatActivity {
                 return false;
             }
         });
+        if (!SharedPrefManager.getInstance(this).isLoggedIn()) {
+            finish();
+            startActivity(new Intent(this, Login.class));
+        }
+
+
+        textViewId = findViewById(R.id.textViewId);
+        textViewUsername = findViewById(R.id.textViewUsername);
+        textViewEmail = findViewById(R.id.textViewEmail);
+
+
+        //getting the current user
+        User user = SharedPrefManager.getInstance(this).getUser();
+
+        //setting the values to the textviews
+        textViewId.setText(String.valueOf(user.getId()));
+        textViewUsername.setText(user.getUsername());
+        textViewEmail.setText(user.getEmail());
+
+
+
+        //when the user presses logout button
+        //calling the logout method
+        findViewById(R.id.buttonLogout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                SharedPrefManager.getInstance(getApplicationContext()).logout();
+                Intent intent =new Intent(Profile.this,Login.class);
+                finishAffinity();
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

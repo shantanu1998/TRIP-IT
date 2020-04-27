@@ -43,16 +43,19 @@ public class Main2Activity extends AppCompatActivity {
                     case R.id.bookings:
                         startActivity(new Intent(getApplicationContext(),Booking.class));
                         overridePendingTransition(0,0);
+
                         return true;
 
                     case R.id.profile:
                         startActivity(new Intent(getApplicationContext(),Profile.class));
                         overridePendingTransition(0,0);
+
                         return true;
 
                     case R.id.support:
                         startActivity(new Intent(getApplicationContext(),Support.class));
                         overridePendingTransition(0,0);
+
                         return true;
 
                     case R.id.homee:
