@@ -55,7 +55,6 @@ public class Main2Activity extends AppCompatActivity {
                     case R.id.support:
                         startActivity(new Intent(getApplicationContext(),Support.class));
                         overridePendingTransition(0,0);
-
                         return true;
 
                     case R.id.homee:
