@@ -14,9 +14,7 @@
         android:orientation="vertical"
         android:gravity="center_vertical"
         android:layout_margin="30dp"
-        android:padding="10dp"
-
-        >
+        android:padding="10dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -71,16 +69,24 @@
 
      <Button
          android:id="@+id/addphotos"
-         android:layout_width="match_parent"
+         android:layout_width="150dp"
          android:layout_height="50dp"
          android:textAllCaps="false"
-         android:hint="Add Photos"
+         android:text="Choose Photos"
+
+         android:layout_gravity="center"
         android:background="@drawable/addphotos_shape"
          android:layout_marginTop="10dp"
-         android:gravity="start"
-         android:padding="15dp"
-         />
 
+         android:padding="15dp" />
+
+
+        <ImageView
+            android:id="@+id/imghomestay"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+           android:layout_marginTop="10dp"
+            android:layout_gravity="center"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"

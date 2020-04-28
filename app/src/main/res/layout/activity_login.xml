@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="170dp"
         android:layout_centerHorizontal="true"
-
+        android:layout_alignParentTop="true"
         android:src="@drawable/logo" />
 
     <RelativeLayout
@@ -128,18 +128,18 @@
             android:layout_marginLeft="20dp"
             android:textSize="20sp"
             android:textColor="@color/pink"/>
-        <ProgressBar
-            android:visibility="gone"
-            android:id="@+id/progressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true" />
+
 
 
     </LinearLayout>
 
-
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
   
 
     

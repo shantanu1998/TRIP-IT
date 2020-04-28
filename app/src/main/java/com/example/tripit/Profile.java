@@ -56,7 +56,7 @@ public class Profile extends AppCompatActivity {
                 return false;
             }
         });
-        if (!SharedPrefManager.getInstance(this).isLoggedIn()) {
+        /*if (!SharedPrefManager.getInstance(this).isLoggedIn()) {
             finish();
             startActivity(new Intent(this, Login.class));
         }
@@ -89,7 +89,7 @@ public class Profile extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+*/
 
     }
 }
