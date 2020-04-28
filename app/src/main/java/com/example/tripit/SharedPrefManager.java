@@ -65,7 +65,7 @@ public class SharedPrefManager {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt(KEY_Admin_ID, admin_User.getId());
         editor.putString(KEY_Admin_USERNAME, admin_User.getUsername());
-        editor.putString(KEY_EMAIL, admin_User.getEmail());
+        editor.putString(KEY_Admin_EMAIL, admin_User.getEmail());
 
         editor.apply();
 
@@ -105,6 +105,17 @@ public class SharedPrefManager {
 
         );
     }
+
+    public Admin_User getAdmin_User() {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        return new Admin_User(
+                sharedPreferences.getInt(KEY_Admin_ID, -1),
+                sharedPreferences.getString(KEY_Admin_USERNAME, null),
+                sharedPreferences.getString(KEY_Admin_EMAIL, null)
+
+        );
+    }
+
 
     public HomeStay getHomeStay() {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);

@@ -37,16 +37,7 @@ public class Register extends AppCompatActivity {
         etEmail=(EditText)findViewById(R.id.editTextEmail);
         etpassword=(EditText)findViewById(R.id.editTextPassword);
 
-        Register=(Button)findViewById(R.id.Register);
 
-        Register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                add_User();
-
-
-            }
-        });
 
 
         TextView tvLogin=findViewById(R.id.tvLogin);
@@ -58,7 +49,7 @@ public class Register extends AppCompatActivity {
         });
     }
 
-    public void add_User(){
+    public void add_User(View view){
 
         final String name = name1.getText().toString();
         final String Email = etEmail.getText().toString();
@@ -103,12 +94,14 @@ public class Register extends AppCompatActivity {
                 pdLoading.dismiss();
 
 
+
                 try {
                     //converting response to json object
 
                     JSONObject obj = new JSONObject(s);
                     //if no error in response
                     if (!obj.getBoolean("error")) {
+
                         Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(Register.this,Login.class);
                         startActivity(intent);

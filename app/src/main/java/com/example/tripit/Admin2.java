@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class Admin2 extends AppCompatActivity {
 
@@ -29,6 +30,12 @@ public class Admin2 extends AppCompatActivity {
 
         Button btnhome=findViewById(R.id.btnhome);
         btnhome.setOnClickListener(btnAdminHome());
+
+        Admin_User admin_user= SharedPrefManager.getInstance(this).getAdmin_User();
+
+        String getAdmin = admin_user.getUsername();
+        Toast.makeText(getApplicationContext(), getAdmin, Toast.LENGTH_SHORT).show();
+
 
     }
 

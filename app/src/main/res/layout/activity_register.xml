@@ -74,6 +74,7 @@
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:text="Sign Up"
+        android:onClick="add_User"
         android:textColor="@color/white"
         android:id="@+id/Register"
         android:layout_centerHorizontal="true"
