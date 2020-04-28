@@ -9,17 +9,20 @@ public class SharedPrefManager {
 
     //the constants
     private static final String SHARED_PREF_NAME = "pref";
+    //User Constants
     private static final String KEY_USERNAME = "keyusername";
     private static final String KEY_EMAIL = "keyemail";
-
     private static final String KEY_ID = "keyid";
+    //Admin Constants
+    private static final String KEY_Admin_USERNAME = "keyusername";
+    private static final String KEY_Admin_EMAIL = "keyemail";
+    private static final String KEY_Admin_ID = "keyid";
     private static final String IS_LOGIN = "IsLoggedIn";
 
 
     //the homestay constants
     private static final String KEY_HomeStayname = "keyHomeStayname";
     private static final String KEY_location = "keylocation";
-
     private static final String KEY_homstayID = "keyhomestayid";
     private static final String KEY_rent = "keyrent";
 
@@ -51,7 +54,7 @@ public class SharedPrefManager {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt(KEY_ID, user.getId());
         editor.putString(KEY_USERNAME, user.getUsername());
-        editor.putString(KEY_EMAIL, user.getEmail());
+        editor.putString(KEY_Admin_EMAIL, user.getEmail());
 
         editor.apply();
 
@@ -60,8 +63,8 @@ public class SharedPrefManager {
         this.admin_User = admin_User;
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(KEY_ID, admin_User.getId());
-        editor.putString(KEY_USERNAME, admin_User.getUsername());
+        editor.putInt(KEY_Admin_ID, admin_User.getId());
+        editor.putString(KEY_Admin_USERNAME, admin_User.getUsername());
         editor.putString(KEY_EMAIL, admin_User.getEmail());
 
         editor.apply();
