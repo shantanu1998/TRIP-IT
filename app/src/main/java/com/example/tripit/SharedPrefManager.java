@@ -29,6 +29,8 @@ public class SharedPrefManager {
 
     private HomeStay homeStay;
 
+    private Admin_User admin_User;
+
     private HomeStay_Photos homeStay_photos;
     private SharedPrefManager(Context context) {
         mCtx = context;
@@ -50,6 +52,17 @@ public class SharedPrefManager {
         editor.putInt(KEY_ID, user.getId());
         editor.putString(KEY_USERNAME, user.getUsername());
         editor.putString(KEY_EMAIL, user.getEmail());
+
+        editor.apply();
+
+    }
+    public void AdminLogin(Admin_User admin_User) {
+        this.admin_User = admin_User;
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(KEY_ID, admin_User.getId());
+        editor.putString(KEY_USERNAME, admin_User.getUsername());
+        editor.putString(KEY_EMAIL, admin_User.getEmail());
 
         editor.apply();
 

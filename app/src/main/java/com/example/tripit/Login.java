@@ -182,8 +182,6 @@ public class Login extends AppCompatActivity {
 
         UserLogin ul = new UserLogin();
         ul.execute();
-        //Intent intent=new Intent(Login.this,Main2Activity.class);
-        //Login.this.startActivity(intent);
 
 
 
