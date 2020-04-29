@@ -11,12 +11,14 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Booking extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
+    private Button btn;
 
 
     @Override
@@ -65,6 +67,14 @@ public class Booking extends AppCompatActivity {
             }
         });
 
+        btn = findViewById(R.id.ButtonTEST);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Booking.this,Main3Activity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
