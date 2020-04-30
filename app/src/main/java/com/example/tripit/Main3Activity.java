@@ -78,7 +78,12 @@ public class Main3Activity extends AppCompatActivity {
                     arrayList.add(new HomeStay_Photos(
                             HomeStay_Photo_Object.getString("HSID"),
                             HomeStay_Photo_Object.getString("HS_Image"),
-                            HomeStay_Photo_Object.getString("HS_Name")
+                            HomeStay_Photo_Object.getString("HS_Name"),
+                            HomeStay_Photo_Object.getString("Admin_ID"),
+                            HomeStay_Photo_Object.getString("HS_Category"),
+                            HomeStay_Photo_Object.getString("HS_location"),
+                            HomeStay_Photo_Object.getString("HS_Rent"),
+                            HomeStay_Photo_Object.getString("HS_Description")
                     ));
 
 
