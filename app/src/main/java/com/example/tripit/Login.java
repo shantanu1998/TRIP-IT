@@ -45,15 +45,13 @@ public class Login extends AppCompatActivity {
         tvSignup.setOnClickListener(onClickSignup());
         tvSignupSecond.setOnClickListener(onClickSignup());
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
+       btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               userLogin();
-
-
-
-
-            }
+              // userLogin();
+                Intent intent=new Intent(Login.this,Main2Activity.class);
+                Login.this.startActivity(intent);
+                            }
         });
     }
 
@@ -82,7 +80,7 @@ public class Login extends AppCompatActivity {
     }
 
 
-    private void userLogin() {
+   private void userLogin() {
         //first getting the values
         final String username = editTextUsername.getText().toString();
         final String password = editTextPassword.getText().toString();
