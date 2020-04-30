@@ -46,15 +46,18 @@ public class CustomListAdapter extends ArrayAdapter<HomeStay_Photos> {
 
         ImageView imageView=(ImageView) convertView.findViewById(R.id.imgview);
         Picasso.get().setLoggingEnabled(true);
-        Picasso.get().load(homeStay_photos.getImage()).fit().into(imageView);
+        Picasso.get().load(homeStay_photos.getImage()).into(imageView);
 
 
 
         TextView txtname = (TextView) convertView.findViewById(R.id.homestay_name);
         txtname.setText(homeStay_photos.getName());
 
-        TextView txtID = (TextView) convertView.findViewById(R.id.location);
-        txtID.setText(homeStay_photos.getHSID());
+        TextView txtlocation = (TextView) convertView.findViewById(R.id.location);
+        txtlocation.setText(homeStay_photos.getHS_location());
+
+        TextView txtRent= (TextView) convertView.findViewById(R.id.price);
+        txtRent.setText(homeStay_photos.getHS_Rent());
 
 
         return convertView;
