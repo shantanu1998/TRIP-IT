@@ -69,7 +69,7 @@ public class Main3Activity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String content) {
             try {
-                progressBar.setVisibility(View.GONE);
+
                 JSONObject jsonObject = new JSONObject(content);
                 final JSONArray jsonArray =  jsonObject.getJSONArray("images");
 
@@ -85,6 +85,8 @@ public class Main3Activity extends AppCompatActivity {
                             HomeStay_Photo_Object.getString("HS_Rent"),
                             HomeStay_Photo_Object.getString("HS_Description")
                     ));
+
+                    progressBar.setVisibility(View.GONE);
 
 
 
