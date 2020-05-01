@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".book_homestay">
+
+
+
+    
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:background="@drawable/homestayimg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="-15dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginRight="-15dp"
+        android:layout_marginBottom="-30dp"
+        android:background="@drawable/book_homestay"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/homestay_name_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Royal Homestay"
+            android:textColor="#ff5832"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/location2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="-8dp"
+            android:drawableLeft="@drawable/location"
+            android:text="Near Dandi Beach"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/amenities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Amenities:-"
+            android:textColor="#000"
+            android:textSize="20sp"
+
+            android:textStyle="bold" />
+
+
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/ic_tv_black_24dp"
+                    android:text="TV" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/wifi"
+                    android:text="Internet" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/local_dining"
+                    android:text="Restaurant" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/parking"
+                    android:text="Parking" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/room_service"
+                    android:text="Room Service" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/laundry"
+                    android:text="Laundry Service" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/power"
+                    android:text="Power Backup" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/beach_access"
+                    android:text="Beach Access" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/smoke_free"
+                    android:text="Smoke Free" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableTop="@drawable/air_conditoned"
+                    android:text="AC" />
+
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="About the Property:-"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="CHECK IN"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="11 AM"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:textColor="#ff5832" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="-"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:text="CHECK OUT" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="12 PM"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:textColor="#ff5832" />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/decsription"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/CheckIn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:text="Check In"
+                android:textStyle="bold"
+
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/CheckOut1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="155dp"
+                android:layout_marginTop="20dp"
+                android:text="Check Out"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/CheckIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:hint="DD/MM/YYYY"
+                android:textSize="18sp" />
+
+
+
+            <TextView
+                android:id="@+id/CheckOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="105dp"
+                android:layout_marginTop="5dp"
+                android:hint="DD/MM/YYYY"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+
+
+        
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/bottom_booking"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/price_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 999"
+            android:drawableLeft="@drawable/rupee_book"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:textSize="25sp"
+            android:textColor="#ff5832"
+            android:layout_marginLeft="30dp"/>
+
+        <TextView
+            android:id="@+id/book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BOOK NOW"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/arrow_forward"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_centerVertical="true"
+            android:textColor="#ff5832"/>
+
+
+       
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

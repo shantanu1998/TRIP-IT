@@ -18,7 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class Booking extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
-    private Button btn;
+    private Button btn,btn2;
 
 
     @Override
@@ -75,6 +75,20 @@ public class Booking extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        btn2=findViewById(R.id.Button);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+
+                Intent intent=new Intent(Booking.this,book_homestay.class);
+                startActivity(intent);
+            }
+        });
+
+
+
 
 
     }
