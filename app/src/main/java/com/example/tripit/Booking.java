@@ -78,14 +78,14 @@ public class Booking extends AppCompatActivity {
 
 
         btn2=findViewById(R.id.Button);
-        btn2.setOnClickListener(new View.OnClickListener() {
+       /* btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
 
                 Intent intent=new Intent(Booking.this,book_homestay.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
 
 

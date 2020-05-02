@@ -36,6 +36,11 @@ public class Main3Activity extends AppCompatActivity {
     private ProgressBar progressBar;
     ArrayList<HomeStay_Photos> arrayList;
     ListView lv;
+    public final static String TAG_name="com.example.tripit";
+    public final static String TAG_image="com.example.tripit";
+    public final static String TAG_location="com.example.tripit";
+    public final static String TAG_Rent="com.example.tripit";
+    public final static String TAG_Description="com.example.tripit";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +48,8 @@ public class Main3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main3);
         arrayList = new ArrayList<>();
         lv = (ListView) findViewById(R.id.listView);
+
+
 
         runOnUiThread(new Runnable() {
             @SuppressLint("NewApi")
@@ -115,9 +122,16 @@ public class Main3Activity extends AppCompatActivity {
 
 
                     Bundle extras = new Bundle();
-                    extras.putString("TAG_name",name);
-                    extras.putString("TAG_HPID",homeStay_photos.getHSID());
+                    extras.putString("TAG_name",homeStay_photos.getName());
+                    extras.putString("TAG_HSID",homeStay_photos.getHSID());
                     extras.putString("TAG_image",homeStay_photos.getImage());
+                    extras.putString("TAG_location",homeStay_photos.getHS_location());
+                    extras.putString("TAG_Rent",homeStay_photos.getHS_Rent());
+                    extras.putString("TAG_Description",homeStay_photos.getHS_Description());
+
+                    Intent intent=new Intent(Main3Activity.this,book_homestay.class);
+                    intent.putExtras(extras);
+                    startActivity(intent);
 
                 }
             });

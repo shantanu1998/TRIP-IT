@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.MemoryPolicy;
+import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -46,8 +48,15 @@ public class CustomListAdapter extends ArrayAdapter<HomeStay_Photos> {
 
         ImageView imageView=(ImageView) convertView.findViewById(R.id.imgview);
         Picasso.get().setLoggingEnabled(true);
-        Picasso.get().load(homeStay_photos.getImage()).into(imageView);
+        String url= homeStay_photos.getImage().replaceAll("(?<=[^:\\s])(\\/+\\/)", "/");
+        try {
+            assert homeStay_photos != null;
+            Picasso.get().load(url).fit().into(imageView);
+        }catch (NullPointerException e){
 
+            e.printStackTrace();
+
+        }
 
 
         TextView txtname = (TextView) convertView.findViewById(R.id.homestay_name);

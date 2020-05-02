@@ -13,8 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".book_homestay"></activity>
-        <activity android:name=".Main3Activity" />
+        <activity android:name=".Main3Activity"></activity>
+        <activity android:name=".book_homestay"/>
         <activity android:name=".Support" />
         <activity android:name=".Profile" />
         <activity android:name=".AddListings" />

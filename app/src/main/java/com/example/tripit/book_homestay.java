@@ -8,13 +8,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class book_homestay extends AppCompatActivity  {
+    private ImageView imageView;
+    private TextView name ,location , description,price;
+    String name1,location1 , description1,price1;
+
 
 TextView dateformat;
 TextView dateformat1;
@@ -24,10 +31,39 @@ int year,year1;
 String DOB;
     String DOB1;
 
+    HomeStay_Photos homeStay_photos;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_homestay);
+
+        Bundle extras = getIntent().getExtras();
+
+        imageView= findViewById(R.id.HomeStay_Image);
+        name = findViewById(R.id.homestay_name_2);
+        location=findViewById(R.id.location2);
+        description= findViewById(R.id.decsription);
+        price=findViewById(R.id.price_book);
+
+        name1=extras.getString("TAG_name");
+        location1=extras.getString("TAG_location");
+        price1= extras.getString("TAG_Rent");
+        description1= extras.getString("TAG_Description");
+
+
+        name.setText(name1);
+        location.setText(location1);
+        price.setText(price1);
+        description.setText(description1);
+
+
+        String  image = extras.getString("TAG_image");
+        Picasso.get().load(image).fit().into(imageView);
+
+
+
+
 
         dateformat=findViewById(R.id.CheckIn);
         dateformat1=findViewById(R.id.CheckOut);

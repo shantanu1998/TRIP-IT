@@ -7,13 +7,12 @@
     tools:context=".book_homestay">
 
 
-
-    
-    
     <ImageView
+        android:id="@+id/HomeStay_Image"
         android:layout_width="match_parent"
         android:layout_height="270dp"
-        android:background="@drawable/homestayimg"/>
+        android:scaleType="centerCrop"
+        android:background="@drawable/homestayimg" />
 
     <LinearLayout
         android:layout_width="match_parent"
