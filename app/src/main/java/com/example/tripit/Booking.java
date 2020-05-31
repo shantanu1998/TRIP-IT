@@ -1,19 +1,15 @@
 package com.example.tripit;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Booking extends AppCompatActivity {
 
@@ -77,15 +73,15 @@ public class Booking extends AppCompatActivity {
         });
 
 
-        btn2=findViewById(R.id.Button);
-       /* btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
+     //   btn2=findViewById(R.id.Button);
+       //btn2.setOnClickListener(new View.OnClickListener() {
+         //   @Override
+           // public void onClick(View v){
 
-                Intent intent=new Intent(Booking.this,book_homestay.class);
-                startActivity(intent);
-            }
-        });*/
+             //   Intent intent=new Intent(Booking.this,book_homestay.class);
+               // startActivity(intent);
+            //}
+        //});
 
 
 

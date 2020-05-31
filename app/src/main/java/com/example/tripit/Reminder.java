@@ -1,23 +1,22 @@
 package com.example.tripit;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-//import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 
 import com.allyants.notifyme.NotifyMe;
-import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
-
-
-
+import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
 import java.util.Calendar;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+//import android.app.DatePickerDialog;
+//import android.app.DatePickerDialog;
+//import android.app.TimePickerDialog;
 
 public class Reminder extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
 
@@ -30,7 +29,7 @@ public class Reminder extends AppCompatActivity implements DatePickerDialog.OnDa
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_confirmed);
+        setContentView(R.layout.activity_reminder);
         Button btnNotify=findViewById(R.id.reminder);
         etTitle=findViewById(R.id.reminder_title);
         etContent=findViewById(R.id.reminder_content);
@@ -57,7 +56,7 @@ public class Reminder extends AppCompatActivity implements DatePickerDialog.OnDa
        btnCancel.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-              // NotifyMe.cancel(getApplicationContext(),"test");
+              NotifyMe.cancel(getApplicationContext(),"test");
            }
        });
 
@@ -67,6 +66,8 @@ public class Reminder extends AppCompatActivity implements DatePickerDialog.OnDa
                dpd.show(getFragmentManager(),"Datepickerdialog");
            }
        });
+
+
     }
 
 
