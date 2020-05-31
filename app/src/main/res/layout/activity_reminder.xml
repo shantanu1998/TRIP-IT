@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Reminder"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/reminder_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:hint="Title"
+        />
+
+    <EditText
+        android:id="@+id/reminder_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:hint="Title"
+        />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cancel"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Reminder"
+        android:layout_gravity="center_horizontal"/>
+
+
+</LinearLayout>

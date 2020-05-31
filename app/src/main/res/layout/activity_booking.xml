@@ -6,17 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".Booking">
     <Button
+        android:id="@+id/ButtonTEST"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/ButtonTEST"
         android:text="ANOTHER ACTIVITY"/>
 
     <Button
+        android:id="@+id/Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Button"
         android:layout_below="@+id/ButtonTEST"
         android:text="test"/>
+
 
 
 

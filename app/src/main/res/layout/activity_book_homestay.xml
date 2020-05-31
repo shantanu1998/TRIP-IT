@@ -7,15 +7,13 @@
     tools:context=".book_homestay">
 
 
+
+    
+    
     <ImageView
-        android:id="@+id/HomeStay_Image"
         android:layout_width="match_parent"
         android:layout_height="270dp"
-        android:scaleType="centerCrop"
-        android:background="@drawable/homestayimg" />
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:background="@drawable/homestayimg"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -303,8 +301,21 @@
 
 
         </LinearLayout>
+
+
+
+        
+
+
+
+
+
     </LinearLayout>
-    </ScrollView>
+
+
+
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
@@ -334,8 +345,13 @@
             android:textStyle="bold"
             android:textSize="25sp"
             android:layout_centerVertical="true"
-            android:textColor="#ff5832"
-            android:onClick="sendEmail"/>
-    </RelativeLayout>
+            android:textColor="#ff5832"/>
 
+
+       
+
+
+
+
+    </RelativeLayout>
 </RelativeLayout>

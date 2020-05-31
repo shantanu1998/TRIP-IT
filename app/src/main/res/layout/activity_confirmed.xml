@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Confirmed"
+    android:background="#f4f4f4">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YOUR BOOKING IS CONFIRMED"
+        android:textStyle="bold"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#9bbb34"
+        android:textSize="20sp"
+        android:drawableLeft="@drawable/confirmed"
+        android:drawablePadding="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thank you for booking with us"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:textColor="#000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You will soon receive email confirmation"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="70dp"
+        android:textColor="#ff5832"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:textColor="#000"
+        android:drawableRight="@drawable/print"
+        android:text="We will recommend that you print page now, and bring with you for check-in at homestay.You have been an email with a copy of these confirmed reservation details."/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="YOUR HOMESTAY"
+    android:textSize="20sp"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="36dp"
+    android:textColor="#ff5832" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_marginLeft="36dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginRight="36dp">
+
+        <TextView
+            android:id="@+id/homestay_name_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jayesh Homestay"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/address_name_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textSize="15sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+917057031076"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/phone"
+            android:textColor="#000"
+            android:drawablePadding="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="jayeshchaudhari667@gmail.com"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/email3"
+            android:textColor="#71bcf8"
+            android:drawablePadding="5dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DATES &amp; NUMBER OF PEOPLE"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:layout_marginLeft="36dp"
+        android:textColor="#ff5832" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/border"
+        android:orientation="vertical"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="check in check out"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 night"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 adults"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="180dp"
+           android:layout_marginTop="-70dp"
+            android:background="@drawable/confirmborder">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/calendar"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center_vertical"/>
+
+            <Button
+                android:id="@+id/calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="27dp"
+                android:background="#9bbb34"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="15dp"
+               android:text="Add to calendar"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="10dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PAYMENT SUMMARY"
+        android:layout_marginTop="20dp"
+        android:textColor="#ff5832"
+        android:textSize="20sp"
+        android:layout_marginLeft="36dp"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="138dp"
+    android:orientation="vertical"
+    android:layout_marginLeft="36dp"
+    android:layout_marginRight="36dp"
+    android:padding="10dp"
+    android:background="@drawable/border">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room price per night"/>
+
+        <TextView
+            android:id="@+id/pernight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:text="RS.999" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total room price"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs.999"
+            android:layout_marginLeft="88dp"
+            android:layout_marginTop="5dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GST(20%) Included"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs.200"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="5dp"/>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Cost"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RS.1199"
+           android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_marginLeft="128dp"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="7dp"
+android:textColor="#808080"
+        android:text="JOS TECHNOLOGIES Pvt.Ltd" />
+
+
+</LinearLayout>
+
