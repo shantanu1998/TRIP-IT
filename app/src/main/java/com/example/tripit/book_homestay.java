@@ -23,6 +23,7 @@ public class book_homestay extends AppCompatActivity  {
     String name1,location1 , description1,price1;
 
 
+
 TextView dateformat;
 TextView dateformat1;
 int day,day1;
@@ -114,5 +115,23 @@ String DOB;
                 datePickerDialog.show();
             }
         });
+    }
+
+    public void sendEmail(View view) {
+        //Getting content for email
+        User user = SharedPrefManager.getInstance(this).getUser();
+        Bundle extras = getIntent().getExtras();
+        name1=extras.getString("TAG_name");
+
+
+        String email = user.getEmail();
+        String subject = "BOOKING NOTIFICATION";
+        String message = name1 ;
+
+        //Creating SendMail object
+        JavaMailAPI sm = new JavaMailAPI(this, email, subject, message);
+
+        //Executing sendmail to send email
+        sm.execute();
     }
 }
