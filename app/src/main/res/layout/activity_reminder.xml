@@ -5,13 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Reminder"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#f4f4f4"
+   android:gravity="center_vertical"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/reminder_border"
+    android:orientation="vertical"
+
+    >
+
 
     <EditText
         android:id="@+id/reminder_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
         android:hint="Title"
         />
 
@@ -19,23 +33,41 @@
         android:id="@+id/reminder_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:hint="Title"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:padding="10dp"
+
+        android:layout_marginTop="10dp"
+        android:hint="Content"
         />
 
     <Button
-        android:id="@+id/cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="cancel"
-        android:layout_gravity="center_horizontal"/>
+        android:id="@+id/reminder"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="Add Reminder"
+        android:background="@drawable/shape_login_button"
+        android:textStyle="bold"
+       />
 
     <Button
-        android:id="@+id/reminder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Reminder"
-        android:layout_gravity="center_horizontal"/>
+        android:id="@+id/cancel"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:text="cancel"
+        android:background="@drawable/shape_login_button"
+        android:layout_marginBottom="10dp"
+
+        />
+
+
+</LinearLayout>
+
 
 
 </LinearLayout>
