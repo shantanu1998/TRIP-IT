@@ -1,7 +1,6 @@
 package com.example.tripit;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 
 public class SharedPrefManager {
@@ -25,6 +24,10 @@ public class SharedPrefManager {
     private static final String KEY_location = "keylocation";
     private static final String KEY_homstayID = "keyhomestayid";
     private static final String KEY_rent = "keyrent";
+    private static final String KEY_Image = "keyrent";
+    private static final String KEY_category = "keyrent";
+    private static final String KEY_description = "keyrent";
+    private static final String KEY_AdminID1 = "keyrent";
 
     private static SharedPrefManager mInstance;
     private static Context mCtx;
@@ -75,14 +78,14 @@ public class SharedPrefManager {
 
 
 
-        public void HomeStaySelected(HomeStay homeStay) {
-        this.homeStay = homeStay;
+        public void HomeStaySelected(HomeStay_Photos homeStayPhotos) {
+        this.homeStay_photos = homeStayPhotos;
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(KEY_homstayID, homeStay.getID());
-        editor.putString(KEY_HomeStayname, homeStay.getName());
-        editor.putString(KEY_location, homeStay.getLocation());
-        editor.putString(KEY_rent, homeStay.getRent());
+        editor.putString(KEY_homstayID, homeStayPhotos.getHSID());
+        editor.putString(KEY_HomeStayname, homeStayPhotos.getName());
+        editor.putString(KEY_location, homeStayPhotos.getHS_location());
+        editor.putString(KEY_rent, homeStayPhotos.getHS_Rent());
 
         editor.apply();
 
@@ -115,15 +118,20 @@ public class SharedPrefManager {
 
         );
     }
+//(String HSID, String HS_Image, String HS_Name,String Admin_ID,
+//                           String HS_Category,String HS_location,String HS_Rent,String HS_Description)
 
-
-    public HomeStay getHomeStay() {
+    public HomeStay_Photos getHomeStay() {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        return new HomeStay(
-                sharedPreferences.getInt(KEY_homstayID, -1),
+        return new HomeStay_Photos(
+                sharedPreferences.getString(KEY_homstayID, null),
+                sharedPreferences.getString(KEY_Image, null),
                 sharedPreferences.getString(KEY_HomeStayname, null),
+                sharedPreferences.getString(KEY_AdminID1, null),
+                sharedPreferences.getString(KEY_category, null),
                 sharedPreferences.getString(KEY_location, null),
-                sharedPreferences.getString(KEY_rent, null)
+                sharedPreferences.getString(KEY_rent, null),
+                sharedPreferences.getString(KEY_description, null)
 
         );
     }

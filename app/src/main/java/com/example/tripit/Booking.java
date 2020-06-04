@@ -3,7 +3,6 @@ package com.example.tripit;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -63,15 +62,15 @@ public class Booking extends AppCompatActivity {
             }
         });
 
-        btn = findViewById(R.id.ButtonTEST);
-        btn.setOnClickListener(new View.OnClickListener() {
+      //  btn = findViewById(R.id.ButtonTEST);
+       /* btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Booking.this,Main3Activity.class);
                 startActivity(intent);
             }
         });
-
+*/
 
      //   btn2=findViewById(R.id.Button);
        //btn2.setOnClickListener(new View.OnClickListener() {

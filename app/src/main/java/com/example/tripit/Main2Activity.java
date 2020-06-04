@@ -1,24 +1,19 @@
 package com.example.tripit;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.FrameLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 public class Main2Activity extends AppCompatActivity {
 
+    private Button btn;
 
 
     @Override
@@ -65,6 +60,15 @@ public class Main2Activity extends AppCompatActivity {
 
                 }
                 return false;
+            }
+        });
+
+        btn = findViewById(R.id.btn1);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Main2Activity.this,Main3Activity.class);
+                startActivity(intent);
             }
         });
 

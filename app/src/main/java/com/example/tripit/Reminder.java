@@ -5,18 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
 import com.allyants.notifyme.NotifyMe;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
-
 import java.util.Calendar;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-//import android.app.DatePickerDialog;
-//import android.app.DatePickerDialog;
-//import android.app.TimePickerDialog;
 
 public class Reminder extends AppCompatActivity implements DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
 
@@ -57,6 +50,8 @@ public class Reminder extends AppCompatActivity implements DatePickerDialog.OnDa
            @Override
            public void onClick(View v) {
               NotifyMe.cancel(getApplicationContext(),"test");
+              Intent intent=new Intent(Reminder.this,Confirmed.class);
+              startActivity(intent);
            }
        });
 

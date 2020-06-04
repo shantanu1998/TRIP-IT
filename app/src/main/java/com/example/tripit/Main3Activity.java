@@ -1,26 +1,15 @@
 package com.example.tripit;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -31,6 +20,9 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
+
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Main3Activity extends AppCompatActivity {
     private ProgressBar progressBar;
@@ -118,7 +110,7 @@ public class Main3Activity extends AppCompatActivity {
                     String name = homeStay_photos.getName();
                     Toast.makeText(Main3Activity.this,name, Toast.LENGTH_SHORT).show();
 
-
+                    SharedPrefManager.getInstance(getApplicationContext()).HomeStaySelected(homeStay_photos);
 
 
                     Bundle extras = new Bundle();
@@ -128,6 +120,7 @@ public class Main3Activity extends AppCompatActivity {
                     extras.putString("TAG_location",homeStay_photos.getHS_location());
                     extras.putString("TAG_Rent",homeStay_photos.getHS_Rent());
                     extras.putString("TAG_Description",homeStay_photos.getHS_Description());
+                    extras.putString("TAG_AdminId",homeStay_photos.getAdmin_ID());
 
                     Intent intent=new Intent(Main3Activity.this,book_homestay.class);
                     intent.putExtras(extras);
