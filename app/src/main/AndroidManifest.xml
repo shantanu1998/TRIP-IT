@@ -14,7 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ListView"></activity>
+        <activity android:name=".Camping"></activity>
+        <activity android:name=".Budget" />
+        <activity android:name=".Experiental" />
+        <activity android:name=".Beaches" />
+        <activity android:name=".Trekking" />
+        <activity android:name=".Hills" />
+        <activity android:name=".ListView" />
         <activity android:name=".Reminder" />
         <activity android:name=".book_homestay" />
         <activity android:name=".Confirmed" />

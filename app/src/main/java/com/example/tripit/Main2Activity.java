@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Main2Activity extends AppCompatActivity {
 
-    private Button btn;
+    private Button btn,btn1,btn2,btn3,btn4,btn5;
 
 
     @Override
@@ -68,6 +68,46 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Main2Activity.this,Main3Activity.class);
+                startActivity(intent);
+            }
+        });
+        btn1 = findViewById(R.id.btn2);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Main2Activity.this,Hills.class);
+                startActivity(intent);
+            }
+        });
+        btn2 = findViewById(R.id.btn3);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Main2Activity.this,Trekking.class);
+                startActivity(intent);
+            }
+        });
+        btn3= findViewById(R.id.btn4);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Main2Activity.this,Beaches.class);
+                startActivity(intent);
+            }
+        });
+        btn4 = findViewById(R.id.btn5);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Main2Activity.this,Experiental.class);
+                startActivity(intent);
+            }
+        });
+        btn5 = findViewById(R.id.btn6);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Main2Activity.this,Budget.class);
                 startActivity(intent);
             }
         });
