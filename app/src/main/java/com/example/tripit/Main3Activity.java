@@ -125,6 +125,7 @@ public class Main3Activity extends AppCompatActivity {
                     Intent intent=new Intent(Main3Activity.this,book_homestay.class);
                     intent.putExtras(extras);
                     startActivity(intent);
+                    finish();
 
                 }
             });

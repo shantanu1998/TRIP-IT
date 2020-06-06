@@ -1,5 +1,6 @@
 package com.example.tripit;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
@@ -19,6 +20,7 @@ public class JavaMailAPI extends AsyncTask<Void,Void,Void>  {
 
 
     //Variables
+    @SuppressLint("StaticFieldLeak")
     private Context mContext;
     private Session mSession;
 
@@ -50,7 +52,7 @@ public class JavaMailAPI extends AsyncTask<Void,Void,Void>  {
         mProgressDialog.dismiss();
 
         //Show success toast
-        Toast.makeText(mContext,"Message Sent",Toast.LENGTH_SHORT).show();
+        Toast.makeText(mContext,"Email has been SENT",Toast.LENGTH_SHORT).show();
     }
 
     @Override

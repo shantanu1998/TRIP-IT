@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ListView"></activity>
+        <activity android:name=".CustomListAdapter1"></activity>
+        <activity android:name=".ListView" />
         <activity android:name=".Reminder" />
         <activity android:name=".book_homestay" />
         <activity android:name=".Confirmed" />

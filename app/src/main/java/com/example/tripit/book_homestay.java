@@ -28,7 +28,13 @@ public class book_homestay extends AppCompatActivity  {
     private ImageView imageView;
     private TextView name ,location , description,price;
     String name1,location1 , description1,price1;
+
     public static final String URL_ADD_USER = "http://192.168.43.11/Final/BookStay.php";
+    public final static String TAG_name1="com.example.tripit";
+    public final static String TAG_image1="com.example.tripit";
+    public final static String TAG_location1="com.example.tripit";
+    public final static String TAG_Rent1="com.example.tripit";
+    public final static String TAG_Total1="com.example.tripit";
 
 
     HomeStay_Photos homeStayPhotos;
@@ -42,7 +48,7 @@ public class book_homestay extends AppCompatActivity  {
     private String DOB1;
     private String T3;
     private int days;
-
+    private float T2;
     TextView dateformat;
     TextView dateformat1;
     int day,day1;
@@ -126,30 +132,42 @@ public class book_homestay extends AppCompatActivity  {
 
     }
     public void bookNow(View view) {
-
+        HomeStay_Photos homeStayPhotos= SharedPrefManager.getInstance(this).getHomeStay();
+        User user=SharedPrefManager.getInstance(this).getUser();
 
         BOOK();
         sendEmail();
+        Bundle extras = new Bundle();
+        extras.putString("TAG__User_name1",user.getUsername());
+        extras.putString("TAG_name1",homeStayPhotos.getName());
+        extras.putString("TAG_HSID1",homeStayPhotos.getHSID());
+        extras.putString("TAG_image1",homeStayPhotos.getImage());
+        extras.putString("TAG_location1",homeStayPhotos.getHS_location());
+        extras.putString("TAG_Rent1",homeStayPhotos.getHS_Rent());
+        extras.putString("TAG_Total1",String.valueOf(T2));
 
+
+        Intent intent=new Intent(book_homestay.this,Confirmed.class);
+        intent.putExtras(extras);
+        startActivity(intent);
 
     }
     public void BOOK() {
         User user = SharedPrefManager.getInstance(this).getUser();
         HomeStay_Photos homeStayPhotos= SharedPrefManager.getInstance(this).getHomeStay();
-
+        final String name =homeStayPhotos.getName() ;
         User_ID=String.valueOf(user.getId());
         HSID =homeStayPhotos.getHSID();
         CheckIN_Date=DOB;
         CheckOUT_Date=DOB1;
         T1 = homeStayPhotos.getHS_Rent();
         float Sum = Float.parseFloat(T1);
-        final float T2= Sum + ((Sum)*(0.18f));
+        T2= Sum + ((Sum)*(0.20f));
 
         //Toast.makeText(book_homestay.this, "sum :"+T2, Toast.LENGTH_LONG).show();
 
         T3=String.valueOf(T2);
         //String.valueOf(Total+((18/100)*(Total)));
-
 
 
         @SuppressLint("StaticFieldLeak")
@@ -202,8 +220,6 @@ public class book_homestay extends AppCompatActivity  {
                     if (!obj.getBoolean("error")) {
 
                         Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_LONG).show();
-                        Intent intent= new Intent(book_homestay.this,Confirmed.class);
-                        startActivity(intent);
 
                     }
                 } catch (JSONException e) {
@@ -216,6 +232,7 @@ public class book_homestay extends AppCompatActivity  {
 
         Product prod_exec = new Product();
         prod_exec.execute();
+
 
 
 
@@ -236,13 +253,16 @@ public class book_homestay extends AppCompatActivity  {
                             "Your Booking has been confirmed"+ System.lineSeparator()+
                             "Home Stay Name:"+name+ System.lineSeparator()+
                             "Home Stay Location:"+location+ System.lineSeparator()+
-                            "Total amount to be paid ="+T3+ System.lineSeparator()+ System.lineSeparator()+ System.lineSeparator()+ System.lineSeparator()+
+                            "Total amount to be paid ="+T3+ System.lineSeparator()+
+                            System.lineSeparator()+
+                            System.lineSeparator()+
+                            System.lineSeparator()+
 
 
 
-                            "nHope You enjoy your Stay with US"+ System.lineSeparator()+
-                            "Regards,"+ System.lineSeparator()+
-                            "Team TRIP IT"+ System.lineSeparator()+
+                            "Hope You enjoy your Stay with US"+System.lineSeparator()+
+                            "Regards,"+System.lineSeparator()+
+                            "Team TRIP IT"+System.lineSeparator()+
                             "JOStechnologies Pvt. Ltd.";
         //Dear Sir/mam,\n"+"Your Booking has been confirmed \n"+"Home Stay Name:"+name+"\nHome Stay Location:"+location+"\nTotal amount to be paid ="+T3+"\n \n \nHope You enjoy your Stay with US"+"\n Regards,"+"\n Team TRIP IT"+"\nJOStechnologies Pvt. Ltd.";
 
@@ -251,5 +271,6 @@ public class book_homestay extends AppCompatActivity  {
 
         //Executing sendmail to send email
         sm.execute();
+
     }
 }
