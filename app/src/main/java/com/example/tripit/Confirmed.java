@@ -45,7 +45,7 @@ private TextView HomeStay_name,HomeStay_location,Total,rent,rent1,GST;
         int T=Integer.parseInt(R);
 
         float gst=T*0.20f;
-        GST.setText(String.valueOf(gst));
+        GST.setText(String.valueOf(gst));//BUTTON ADD kar itha
         //finishAffinity();
     }
     public void Reminder(){
